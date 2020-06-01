@@ -4,32 +4,49 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Post List</title>
+    <title>User List</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='admin.css'>
     <script src='main.js'></script>
 </head>
 
 <body>
+    <!-------------------------------------------------------- Navigation Bar ------------------------------------------->
+    <div class="nav-bar">
+        <div id='leftAlign'> <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\index.html"><img src="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Images\HomePageIcon.png"></a> </div>
+        <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Admin\login.html">Admin Login</a>
+        <a href="#">Style Switcher</a>
+        <a href="#">Font Resizer</a>
+    </div>
 
-    <div id='results'>Post Results</div>
+    <!-------------------------------------------------------- Table ------------------------------------------->
 
-    <table>
-        <tr>
-            <th>Post Title</th>
-            <th colspan="4">Operations</th>
-        </tr>
-        <tr>
-            <td>Post 1</td>
-            <td>View</td>
-            <td>Edit</td>
-            <td>Delete</td>
-            <td>Enable/Disable</td>
-
-        </tr>
-    </table>
-
-
+    <section>
+        <!--for demo wrap-->
+        <div class='tableHeader'>Post Results</div>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                    <th>Post</th>
+                    <th colspan="3" class="tableTextCenter">Operations</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <td>Post 1<img class="icon" src="stamp.png"></td>
+                <td><a href="read_post.html">View</a><img class="icon" src="eye.png"></td>
+                <td><a href="update_post.html">Edit</a><img class="icon" src="register.png"></td>
+                <td>Delete<img class="icon" src="minus.png"></td>
+                <td>Enable/Disable<img class="icon" src="switch-off.png"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 </body>
 
 </html>
