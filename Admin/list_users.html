@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>User List</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='admin.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
-    <div id='results'>User Results</div>
+    <!-------------------------------------------------------- Navigation Bar ------------------------------------------->
+    <div class="nav-bar">
+        <div id='leftAlign'> <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\index.html"><img src="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Images\HomePageIcon.png"></a> </div>
+        <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Admin\login.html">Admin Login</a>
+        <a href="#">Style Switcher</a>
+        <a href="#">Font Resizer</a>
+    </div>
 
-<table>
-    <tr>
-        <th>Username</th>
-        <th colspan="3">Operations</th>
-    </tr>
-    <tr>
-        <td>User</td>
-        <td>Edit</td>
-        <td>Delete</td>
-        <td>Enable/Disable</td>
+    <!-------------------------------------------------------- Table ------------------------------------------->
 
-    </tr>
-</table>
-
-</body>
-</html>
+    <section>
+        <!--for demo wrap-->
+        <div class='tableHeader'>User Results</div>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                    <th>Username</th>
+                    <th colspan="3" class="tableTextCenter">Operations</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <td> User <img class="icon" src="user.png"></td>
+                <td> <a href="update_user.html">Edit</a> <img class="icon" src="register.png"></td>
+                <td>Delete <img class="icon" src="minus.png"></td>
+                <td>Enable/Disable<img class="icon" src="switch-off.png"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
