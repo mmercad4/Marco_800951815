@@ -1,0 +1,359 @@
+body {
+  background-image: url("heroImage2.jpg");
+  background-color: #cccccc;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+ /*---------------------------------- Navigation Bar Style -----------------------------------------------------*/
+
+
+ .nav-bar {
+  background-color: black;
+  overflow: hidden;
+  opacity: 85%;
+}
+
+.nav-bar a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.nav-bar a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 25px;
+
+}
+
+#leftAlign {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  padding-left: 100px;
+  margin-top: -30px;
+}
+
+#leftAlign img {
+  height: auto;
+  width: 100%;
+}
+
+/*---------------------------------- Login form style -----------------------------------------------------*/
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: -webkit-linear-gradient(#bd0034, #e74598);;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+.form .register-form {
+  display: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+/*---------------------------------- Table for post/user lists style -----------------------------------------------------*/
+
+table a {
+text-decoration: none;
+color: #fff;
+
+}
+
+table a:hover {
+color: #e74598;
+}
+
+.tableHeader{
+font-size: 30px;
+color: #fff;
+text-transform: uppercase;
+font-weight: 300;
+text-align: center;
+margin-bottom: 15px;
+}
+
+table{
+width:100%;
+table-layout: fixed;
+}
+
+.tbl-header{
+background-color: rgba(255,255,255,0.3);
+}
+
+.tbl-content{
+overflow-x:auto;
+margin-top: 0px;
+border: 1px solid rgba(255,255,255,0.3);
+}
+
+th{
+padding: 20px 15px;
+text-align: left;
+font-weight: 500;
+font-size: 12px;
+color: #fff;
+text-transform: uppercase;
+}
+
+td{
+padding: 15px;
+text-align: left;
+vertical-align:middle;
+font-weight: 300;
+font-size: 20px;
+color: #fff;
+border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+background: linear-gradient(to right, #25c481, #25b7c4);
+font-family: 'Roboto', sans-serif;
+}
+
+section{
+margin: 50px;
+}
+
+
+
+/*---------------------------------- Icons style -----------------------------------------------------*/
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  margin-top: -5px;
+}
+
+
+/*---------------------------------- Post Page -----------------------------------------------------*/
+
+.post-page {
+width: 90%;
+padding: 8% 0 0;
+margin: auto;
+}
+
+#postContent {
+height: 500px;
+}
+.form {
+position: relative;
+z-index: 1;
+background: #FFFFFF;
+max-width: 90%;
+margin: 0 auto 100px;
+padding: 45px;
+text-align: center;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+font-family: "Roboto", sans-serif;
+outline: 0;
+background: #f2f2f2;
+width: 100%;
+border: 0;
+margin: 0 0 15px;
+padding: 15px;
+box-sizing: border-box;
+font-size: 14px;
+}
+
+.form button {
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+outline: 0;
+background: -webkit-linear-gradient(#bd0034, #e74598);;
+width: 100%;
+border: 0;
+padding: 15px;
+color: #FFFFFF;
+font-size: 14px;
+-webkit-transition: all 0.3 ease;
+transition: all 0.3 ease;
+cursor: pointer;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+background: #43A047;
+}
+
+.form .register-form {
+display: none;
+}
+
+.container {
+position: relative;
+z-index: 1;
+max-width: 300px;
+margin: 0 auto;
+}
+
+.container:before, .container:after {
+content: "";
+display: block;
+clear: both;
+}
+
+.container .info {
+margin: 50px auto;
+text-align: center;
+}
+
+.container .info h1 {
+margin: 0 0 15px;
+padding: 0;
+font-size: 36px;
+font-weight: 300;
+color: #1a1a1a;
+}
+
+.container .info span {
+color: #4d4d4d;
+font-size: 12px;
+}
+
+.container .info span a {
+color: #000000;
+text-decoration: none;
+}
+
+.container .info span .fa {
+color: #EF3B3A;
+}
+
+/*---------------------------------- Post Styling -----------------------------------------------------*/
+
+.read-post-page {
+width: 90%;
+padding: 8% 0 0;
+margin: auto;
+}
+
+.postContainer {
+position: relative;
+z-index: 1;
+background: #FFFFFF;
+max-width: 90%;
+margin: 0 auto 100px;
+padding: 45px;
+text-align: center;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.blogPostPage {
+text-decoration: none;
+font-size: 20px;
+letter-spacing: 1px;
+line-height: 30px;
+}
+
+.postTitle {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#bd0034, #e74598);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}

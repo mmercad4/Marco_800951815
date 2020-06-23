@@ -6,21 +6,28 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Add User</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='admin.css'>
     <script src='main.js'></script>
 </head>
 
 <body>
-    <form action="/action_page.php" method="POST">
-        <label for='uname'>Username</label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+    <!-------------------------------------------------------- Navigation Bar ------------------------------------------->
+    <div class="nav-bar">
+        <div id='leftAlign'> <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\index.html"><img src="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Images\HomePageIcon.png"></a> </div>
+        <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Admin\login.html">Admin Login</a>
+    </div>
 
-        <label for="psw">Password</label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+    <!-------------------------------------------------------- Login Form ------------------------------------------->
 
-        <button type="submit">Add User</button>
-
-    </form>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <input type="text" placeholder="username" />
+                <input type="password" placeholder="password" />
+                <button>Add User</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>New Post</title>
+    <title>Add User</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='admin.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
-    <form action="/action_page.php" method="POST">
-        <label for='postTitle'>Post Title</label>
-        <input type="text" placeholder="Enter a Title" name="postTitle" required>
+    <!-------------------------------------------------------- Navigation Bar ------------------------------------------->
+    <div class="nav-bar">
+        <div id='leftAlign'> <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\index.html"><img src="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Images\HomePageIcon.png"></a> </div>
+        <a href="C:\Users\Marco Mercado\Desktop\Network App Development\Marco_800951815\Admin\login.html">Admin Login</a>
+    </div>
 
-        <label for="content">Content</label>
-        <input type="text" placeholder="Type away!" name="content" required>
+    <!-------------------------------------------------------- Login Form ------------------------------------------->
 
-        <button type="submit">Add Post</button>
-
-    </form>
+    <div class="post-page">
+        <div class="form">
+            <form class="post-form">
+                <input type="text" placeholder="Title" />
+                <input  id="postContent"type="text" placeholder="Content of Post" />
+                <button>Add Post</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
