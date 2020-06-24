@@ -15,4 +15,16 @@ $(document).ready(function(){
 
     });
 
+    $('td:nth-child(4)').on('click', function(){
+        var item = $(this).closest('tr').children('td:first').text().replace(/ /g, "-");
+
+        $.ajax({
+            type: 'DELETE',
+            url: '/list_posts/'+item,
+            success: function(data){
+                location.reload();
+            }
+        });
+    });
+
 });
