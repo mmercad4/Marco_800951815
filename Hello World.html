@@ -1,0 +1,292 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>Marco Mercado</title>
+  <meta charset="utf-8">
+  <meta name="Description" content="Resume Website">
+  <meta name="keywords" content="Marco Mercado">
+  <meta name="author" content="Marco Mercado">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/f4831478a7.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,500;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar using bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <img src="images/Asset 1.svg">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#Education">Education<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#Skills">Skills<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#AboutMe">About me<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Resume<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <!--  Home page using jumbotron from bootstrap
+  1. Added div class "jumbotron vertical-center" to center content of jumbotron
+ -->
+  <div class="jumbotron vertical-center">
+    <div class="jumbotron">
+      <img src='images/Asset 1.svg' alt="image of Marco" id="jumbotron-image" width="400" height="400">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">My name is Marco Mercado. I am an aspiring full stack developer. I want to make things that give
+        people a voice.
+      </p>
+      <hr class="my-4">
+      <p>My skills will showcase themselves in my projects, but who am I as a person?</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more about me</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-body" id="Education">Education</div>
+  </div>
+
+  <!-- Education Section created by using cards from Bootstrap -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card h-100" style="width: 30rem;">
+          <img class="card-img-top" src="images\RCEC Logo.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Rowan County Early College<br> 2012-2016</h5>
+            <p class="card-text">High school Diploma</p>
+            <ul>
+              <li>Junior Civitan Club President</li>
+              <li>Junior Civitan Lt. Governor for North Carolina District West</li>
+              <li>SGA Senator</li>
+              <li>Student Ambassador</li>
+              <li>3.~ GPA</li>
+              <li>Prom King 2016</li>
+            </ul>
+            <a href="https://www.rssed.org/rcec" target="_blank" class="btn btn-primary">Visit RCEC</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card h-100" style="width: 30rem;">
+          <img class="card-img-top" src="images\RCCC Logo.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Rowan Cabarrus Community College <br> 2012-2016</h5>
+            <p class="card-text">Associate of Science</p>
+            <p class="card-text">Associate of Arts</p>
+            <ul>
+              <li>Student Ambassador</li>
+              <li>3.~ GPA</li>
+              <li>Worked 30+ hours a week</li>
+            </ul>
+            <a href="https://www.rccc.edu/" target="_blank" class="btn btn-primary">Visit RCCC</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card h-100" style="width: 30rem;">
+          <img class="card-img-top" src="images\UNC Charlotte logo.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">University of North Carolinta at Charlotte <br> 2016-Current</h5>
+            <ul>
+              <li>Chancellor's List Fall 2019</li>
+              <li>Chancellor's List Spring 2020</li>
+              <li>3.~ GPA</li>
+              <li>Worked 30+ hours a week</li>
+            </ul>
+            <a href="https://www.uncc.edu/" target="_blank" class="btn btn-primary">Visit UNC-Charlotte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-body" id="Skills">Skills</div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="card skills-panel" style="width: 90%;">
+      <div class="card-body">
+        <h3 class="card-title">Front-End</h3>
+
+        <table class="skills-table">
+          <tr>
+            <th> <i class="fab fa-html5 fa-10x"></i></th>
+            <th> <i class="fab fa-css3-alt fa-10x"></i></th>
+            <th><i class="fab fa-js fa-10x"></i></th>
+            <th><img src="images\jquery icon.webp" class="icon-resize"></th>
+            <th><i class="fab fa-bootstrap fa-10x"></i></th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>Javascript</td>
+            <td>JQuery</td>
+            <td>Bootstrap</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card skills-panel" style="width: 90%;">
+      <div class="card-body">
+        <h3 class="card-title">Back-End </h3>
+
+        <table class="skills-table">
+          <tr>
+            <th> <img src="images\Ruby On Rails Icon.png" class="icon-resize"> </th>
+            <th> <i class="fas fa-database fa-8x"></i>
+            </th>
+
+          </tr>
+          <tr>
+            <td>Ruby on Rails</td>
+            <td>MySQL</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card skills-panel" style="width: 90%;">
+      <div class="card-body">
+        <h3 class="card-title">Other</h3>
+
+        <table class="skills-table">
+          <tr>
+            <th> <i class="fas fa-microphone fa-8x"></i>
+            </th>
+            <th> <i class="fas fa-language fa-8x"></i>
+            </th>
+            <th> <i class="fas fa-file-word fa-8x"></i>
+            </th>
+            <th> <i class="far fa-comments fa-8x"></i>
+            </th>
+            <th> <i class="far fa-calendar-alt fa-8x"></i>
+            </th>
+          </tr>
+          <tr>
+            <td>Communication</td>
+            <td>Bilingual</td>
+            <td> Microsoft Office
+            </td>
+            <td>Teamwork</td>
+            <td>Organization</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+    <div class="card skills-panel" style="width: 90%;">
+      <div class="card-body">
+        <h3 class="card-title">Learning</h3>
+
+        <table class="skills-table">
+          <tr>
+            <th><i class="fab fa-php fa-8x"></i>
+            </th>
+            <th> <i class="fab fa-angular fa-8x"></i>
+            </th>
+            <th> <i class="fab fa-node fa-8x"></i>
+            </th>
+            <th> <i class="fab fa-adobe fa-8x"></i>
+            </th>
+            <th> <i class="fas fa-code-branch fa-8x"></i>
+            </th>
+
+          </tr>
+          <tr>
+            <td>PHP</td>
+            <td>Angular</td>
+            <td> Node.js
+            </td>
+            <td>Adobe Creative Cloud</td>
+            <td>VCS GIT</td>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-body" id="AboutMe">About Me</div>
+  </div>
+
+  <div class="aboutMe">
+    <div class="card skills-panel" style="width: 90%;">
+      <div class="card-body">
+        <h3 class="card-title">Dog Owner</h3>
+        <div class="container-fluid about-me-section">
+          <img src="images\FourDogPhoto.jpg" class="rounded float-left img-thumbnail about-me-images">
+          <img src="images\FourDogsAlone.jpg" class="rounded float-left img-thumbnail about-me-images">
+          <img src="images\ChesterOllie.jpg" class="rounded float-left img-thumbnail about-me-images">
+        </div>
+        <p>I happily own four dogs with my significant other. In the image from left to right there is: Maggie, Oliver,
+          Poppy, and Chester! They have all been rescues. My girlfriend is a dog trainer so there
+          is always lots of work and play time to be done with our pups. We are constantly having them explore the world
+          whether it be a lake, a mountain, a beach, or a plain field. They have been
+          far from home, all the way to Pittsburgh to be exact. They did wonderful in a 9 hour car ride.
+        </p>
+      </div>
+    </div>
+
+    <div class="card skills-panel" style="width: 90%;">
+      <div class="card-body">
+        <h3 class="card-title">Athletics</h3>
+        <div class="container-fluid about-me-section">
+          <img src="images\FourDogPhoto.jpg" class="rounded float-left img-thumbnail about-me-images">
+          <img src="images\FourDogsAlone.jpg" class="rounded float-left img-thumbnail about-me-images">
+          <img src="images\ChesterOllie.jpg" class="rounded float-left img-thumbnail about-me-images">
+        </div>
+        <p>I happily own four dogs with my significant other. In the image from left to right there is: Maggie, Oliver,
+          Poppy, and Chester! They have all been rescues. My girlfriend is a dog trainer so there
+          is always lots of work and play time to be done with our pups. We are constantly having them explore the world
+          whether it be a lake, a mountain, a beach, or a plain field. They have been
+          far from home, all the way to Pittsburgh to be exact. They did wonderful in a 9 hour car ride.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
