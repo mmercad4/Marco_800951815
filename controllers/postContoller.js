@@ -27,6 +27,15 @@ module.exports = function (app) {
             if (err) throw err;
             res.render('index', { posts: data })
         });
+
+    });
+
+    app.get('/post', function (req, res) {
+        //get data from mongodb and pass it to the view
+        Post.find({}, function (err, data) {
+            if (err) throw err;
+            res.render('post', { posts: data })
+        });
     });
 
     //Posting content
@@ -59,15 +68,5 @@ module.exports = function (app) {
             if (err) throw err;
             res.json(data);
         });
-        /*         data = data.filter(function(postTitle){
-                    newParam = req.params.item.replace("-", "");
-                    return postTitle.title.replace(/ /g, '-') !== newParam;
-         */
     });
-
-app.get('/index', function (req, res) {
-
-});
-
-
 };

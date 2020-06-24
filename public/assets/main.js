@@ -47,18 +47,18 @@ function currentPost(n){
     post4= '<div class="blogPost"><a href="post4.html"><h3 class="resize">Post 4</h3></a><p class="resize">    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore    et dolore magna aliqua.    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo    consequat. Duis aute irure    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur    sint occaecat cupidatat non    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
 
 if (n == 0) {
-    document.getElementById("containerBlogPost").innerHTML = post1;    
+    document.getElementById("containerBlogPost").innerHTML = posts[0].title;    
 }
 else if (n == 1){
-    document.getElementById("containerBlogPost").innerHTML = post2;    
+    document.getElementById("containerBlogPost").innerHTML = posts[1].title;    
 
 }
 else if (n == 2){
-    document.getElementById("containerBlogPost").innerHTML = post3;    
+    document.getElementById("containerBlogPost").innerHTML = posts[2].title;    
 
 }
 else if (n == 3){
-    document.getElementById("containerBlogPost").innerHTML = post4;    
+    document.getElementById("containerBlogPost").innerHTML = posts[3].title;    
 
 }
 }

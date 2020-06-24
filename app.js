@@ -10,6 +10,7 @@ app.set('view engine', 'ejs');
 //static files
 app.use(express.static('./public'));
 
+
 //fire controllers
 postController(app);
 userController(app);
