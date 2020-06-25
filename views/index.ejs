@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+    
 <%- include('partials/header'); -%>
-<script src='/assets/main.js'></script>
-
 
     <!------------------------------------------------------ Background  ------------------------------------------------------------------>
 
@@ -15,13 +13,13 @@
     </div>
 
     <div class="indexBackground">
-        <img name="slide" class="indexBackground">
+        <img name="slide" class="indexBackground" src="/assets/Images/image2.jpg">
     </div>
 
     <!------------------------------------------------------ Blog Entry Section  ------------------------------------------------------------------>
 
 
-    <div style="text-align:center">
+   <div style="text-align:center">
         <span class="dot" onclick="currentPost(0)"></span>
         <span class="dot" onclick="currentPost(1)"></span>
         <span class="dot" onclick="currentPost(2)"></span>
@@ -31,7 +29,7 @@
     <div class="row">
         <div class="column">
             <div id="containerBlogPost">
-                <div class="blogPost"><a href="post1.html">
+                <div class="blogPost"><a href="post">
                     <h3 class="resize"><%= posts[0].title %></h3>
                 </a>
                 <p class="resize">
