@@ -3,7 +3,16 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 const multer = require('multer');
 const { text } = require('body-parser');
-const upload = multer({dest: 'uploads/'});
+const storage = multer.diskStorage({
+    destination: function(req, file, cb){
+        cb(null, './uploads/');
+    },
+    filename: function (req, file, cb){
+        cb(null, file.originalname)
+    }
+});
+
+const upload = multer({storage: storage});
 
 //connect to the database
 mongoose.connect('mongodb+srv://test:test@blog-hd4m3.mongodb.net/posts?retryWrites=true&w=majority', { useNewUrlParser: true });
