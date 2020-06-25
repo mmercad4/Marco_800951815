@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <%- include('partials/header'); -%>
-    <script src='/assets/jquery.js'></script>
-
-    
+<%- include('partials/header'); -%>
+<script src='/assets/jquery.js'></script>
 
 
-    <!-------------------------------------------------------- Login Form ------------------------------------------->
 
-    <div class="post-page">
-        <div class="form">
-            <form class="post-form">
-                <input type="text" name="title" placeholder="Title" required />
-                <input  id="postContent" type="text" name="content" placeholder="Content of Post" required />
-                <button type="submit">Add Post</button>
-            </form>
 
-            <ul>
-                <% for(var i=0; i<posts.length; i++) { %>
-                    <li><%= posts[i].title %> </li>
-                    <% }; %>
+<!-------------------------------------------------------- Login Form ------------------------------------------->
 
-                    <% for(var i=0; i<posts.length; i++) { %>
-                        <li><%= posts[i].content %> </li>
-                        <% }; %>
-            </ul>
-        </div>
+<div class="post-page">
+    <div class="form">
+        <form class="post-form" method="post" enctype="multipart/form-data" action="/uploadTxt">
+            <input type="text" name="title" placeholder="Title" required />
+            <input id="postContent" type="text" name="content" placeholder="Content of Post" />
+            <input type="file" name="content">
+            <button type="submit">Add Post</button>
+        </form>
+
     </div>
+</div>
 </body>
 
 </html>
