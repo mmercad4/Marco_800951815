@@ -2,7 +2,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var fs = require('fs');
 const multer = require('multer');
-const { text } = require('body-parser');
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, './uploads/');
@@ -59,12 +58,21 @@ module.exports = function (app) {
         });
     });
 
-    app.post('/add_post', upload.single('content'),urlencodedParser, function (req, res) {
-        console.log(req.file);
-        var newPost = Post(req.body).save(function (err, data) {
-            if (err) throw err;
-            res.json(data);
-        });
+    app.post('/add_post', urlencodedParser, upload.single('content'), async (req, res) => {
+        const newPost = new Post({
+            title: req.body.title,
+            content: (req.body.content || req.path)    
+            });
+    
+        try {
+            console.log(req.body);
+            const savedPost = await newPost.save();
+            res.json(savedPost);
+
+        }
+        catch (err) {
+            res.json({ message: err });
+        }
     });
 
     //Deleting content
