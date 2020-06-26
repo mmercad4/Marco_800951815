@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html>
-<%- include('partials/header'); -%>
-<script src='/assets/jquery.js'></script>
+    <%- include('partials/header'); -%>
+    <script src='/assets/jquery.js'></script>
+
+    
 
 
+    <!-------------------------------------------------------- Login Form ------------------------------------------->
 
+    <div class="post-page">
+        <div class="form">
+            <form class="post-form">
+                <input type="text" name="title" placeholder="Title" required />
+                <input  id="postContent" type="text" name="content" placeholder="Content of Post" required />
+                <button type="submit">Add Post</button>
+            </form>
 
-<!-------------------------------------------------------- Login Form ------------------------------------------->
-
-<div class="post-page">
-    <div class="form">
-        <form class="post-form" method="post" enctype="multipart/form-data" action="/add_post">
-            <input type="text" name="title" placeholder="Title" required />
-            <input id="postContent" type="text" name="content" placeholder="Content of Post" />
-            <input type="file" name="content">
-            <button type="submit">Add Post</button>
-        </form>
-
-        <div class="tbl-content">
-
-        <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
+            <ul>
                 <% for(var i=0; i<posts.length; i++) { %>
-                <tr>
-                    <td> <%= posts[i].title %></td>
-                </tr>
-                <tr>
-                    <td> <%= posts[i].content %></td>
-                </tr>
-                <% }; %>
-            </tbody>
-        </div>
+                    <li><%= posts[i].title %> </li>
+                    <% }; %>
 
+                    <% for(var i=0; i<posts.length; i++) { %>
+                        <li><%= posts[i].content %> </li>
+                        <% }; %>
+            </ul>
+        </div>
     </div>
-</div>
 </body>
 
 </html>

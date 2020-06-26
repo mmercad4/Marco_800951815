@@ -1,6 +1,7 @@
 var express = require('express');
 var postController = require('./controllers/postContoller');
 var userController = require('./controllers/userController');
+const cors = require('cors');
 
 var app = express();
 
@@ -8,8 +9,10 @@ var app = express();
 app.set('view engine', 'ejs');
 
 //static files
+app.use(cors());
 app.use(express.static('./public'));
 app.use(express.static('uploads'));
+
 
 
 //fire controllers

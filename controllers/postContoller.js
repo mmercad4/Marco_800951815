@@ -1,17 +1,5 @@
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var fs = require('fs');
-const multer = require('multer');
-const storage = multer.diskStorage({
-    destination: function(req, file, cb){
-        cb(null, './uploads/');
-    },
-    filename: function (req, file, cb){
-        cb(null, file.originalname)
-    }
-});
-
-const upload = multer({storage: storage});
 
 //connect to the database
 mongoose.connect('mongodb+srv://test:test@blog-hd4m3.mongodb.net/posts?retryWrites=true&w=majority', { useNewUrlParser: true });
@@ -19,12 +7,13 @@ mongoose.connect('mongodb+srv://test:test@blog-hd4m3.mongodb.net/posts?retryWrit
 //create a scheme - this is similar to a blueprint for the data
 
 var postSchema = new mongoose.Schema({
-    title:{
+    title: {
         type: String,
         required: true
-    }, 
+    },
     content: {
-        type: String}
+        type: String
+    }
 });
 
 var Post = mongoose.model('Posts', postSchema);
@@ -32,6 +21,17 @@ var Post = mongoose.model('Posts', postSchema);
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 module.exports = function (app) {
+
+    app.get('/test', async (req, res) => {
+        try {
+            const post = await Post.find();
+            res.json(post);
+
+        }
+        catch (err) {
+            res.json({ message: err });
+        }
+    })
 
     app.get('/index', function (req, res) {
         //get data from mongodb and pass it to the view
@@ -42,14 +42,6 @@ module.exports = function (app) {
 
     });
 
-    app.get('/post', function (req, res) {
-        //get data from mongodb and pass it to the view
-        Post.find({}, function (err, data) {
-            if (err) throw err;
-            res.render('post', { posts: data })
-        });
-    });
-
     //Posting content
     app.get('/add_post', function (req, res) {
         Post.find({}, function (err, data) {
@@ -58,12 +50,12 @@ module.exports = function (app) {
         });
     });
 
-    app.post('/add_post', urlencodedParser, upload.single('content'), async (req, res) => {
+    app.post('/add_post', urlencodedParser, async (req, res) => {
         const newPost = new Post({
             title: req.body.title,
-            content: (req.body.content || req.path)    
-            });
-    
+            content: req.body.content
+        });
+
         try {
             console.log(req.body);
             const savedPost = await newPost.save();
@@ -91,4 +83,26 @@ module.exports = function (app) {
             res.json(data);
         });
     });
+
+/*     app.get("/post/:item", async (req, res) => {
+        try {
+          const post = await Post.findOne({ title: req.params.item });
+          res.json({
+            title: post.title,
+            content: post.content,
+          });
+        } catch (err) {
+          res.json({ message: err });
+        }
+      }); */
+
+      app.get('/post ')
+
+
+      app.get("/post", function (req, res) {
+        Post.find({}, function (err, data) {
+          if (err) throw err;
+          res.render("post", { posts: data });
+        });
+      });
 };

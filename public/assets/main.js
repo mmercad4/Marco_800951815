@@ -1,3 +1,5 @@
+const serverURI = 'http://localhost:3000/'
+
 var i = 0; //Start point
 var images = []; //initialize array
 var time = 5000; //time in ms for length of slide
@@ -9,15 +11,15 @@ images[2] = '/assets/images/image3.jpg'
 images[3] = '/assets/images/image4.jpg'
 
 // Change image based on radio buttons
-function currentSlide(n){
+function currentSlide(n) {
     document.slide.src = images[n];
 }
 
 // Change Image
-function changeImg () {
+function changeImg() {
     document.slide.src = images[i];
 
-    if(i < images.length -1){
+    if (i < images.length - 1) {
         i++;
     }
     else {
@@ -29,16 +31,54 @@ function changeImg () {
 
 // Font Change
 
-function changeFont (){
+function changeFont() {
 
     var x = document.getElementsByClassName("resize");
 
-    for (var i = 0; i < x.length; i++){
-        x[i].style.fontSize="10px";
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.fontSize = "10px";
     }
 };
 
-// Change the current post
+
+function currentPost(n) {
+    axios.get(serverURI + 'test')
+        .then((response) => {
+            if (response.error != "") {
+                console.log(response.data);
+                post1 = '<div class="blogPost"><a href="post"><h3 id="thisTitle" class="resize">'+response.data[n].title+'</h3></a><p class="resize">    "'+response.data[n].content+'"</p></div>';
+                post2 = '<div class="blogPost"><a href="post"><h3 id="thisTitle" class="resize">'+response.data[n].title+'</h3></a><p class="resize">    "'+response.data[n].content+'"</p></div>';
+                post3 = '<div class="blogPost"><a href="post"><h3 id="thisTitle" class="resize">'+response.data[n].title+'</h3></a><p class="resize">    "'+response.data[n].content+'"</p></div>';
+                post4 = '<div class="blogPost"><a href="post"><h3 id="thisTitle" class="resize">'+response.data[n].title+'</h3></a><p class="resize">    "'+response.data[n].content+'"</p></div>';
+                if (n == 0) {
+                    document.getElementById("containerBlogPost").innerHTML = post1;
+                }
+                else if (n == 1) {
+                    document.getElementById("containerBlogPost").innerHTML = post2;
+
+                }
+                else if (n == 2) {
+                    document.getElementById("containerBlogPost").innerHTML = post3;
+
+                }
+                else if (n == 3) {
+                    document.getElementById("containerBlogPost").innerHTML = post4;
+
+                }
+
+            } else {
+                document.getElementById('status').innerHTML = error;
+                showStatus(0)
+            }
+        })
+        .catch((connectionError) => {
+            console.log(connectionError)
+            document.getElementById('status').innerHTML = connectionError
+            showStatus(0)
+        })
+}
+
+/* // Change the current post
 function currentPost(n){
 
     post1= '<div class="blogPost"><a href="post1.html"><h3 class="resize">Post 1</h3></a><p class="resize">    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore    et dolore magna aliqua.    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo    consequat. Duis aute irure    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur    sint occaecat cupidatat non    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
@@ -61,7 +101,7 @@ else if (n == 3){
     document.getElementById("containerBlogPost").innerHTML = posts[3].title;    
 
 }
-}
+} */
 
 
 window.onload = changeImg;
