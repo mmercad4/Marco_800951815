@@ -1,3 +1,5 @@
+const serverURI = 'http://localhost:3000/'
+
 var i = 0; //Start point
 var images = []; //initialize array
 var time = 5000; //time in ms for length of slide
@@ -7,7 +9,7 @@ images[0] = '/assets/images/image1.jpg'
 images[1] = '/assets/images/image2.jpg'
 images[2] = '/assets/images/image3.jpg'
 images[3] = '/assets/images/image4.jpg'
-
+// Chan
 
 
 
@@ -17,7 +19,7 @@ function currentSlide(n){
 }
 
 // Change Image
-function changeImg () {
+/* function changeImg () {
     document.slide.src = images[i];
 
     if(i < images.length -1){
@@ -29,7 +31,7 @@ function changeImg () {
 
     setTimeout("changeImg()", time);
 };
-
+ */
 // Font Change
 
 function changeFont (){
@@ -41,29 +43,36 @@ function changeFont (){
     }
 };
 
-// Change the current post
+
 function currentPost(n){
+    axios.get(serverURI + 'index')
+    .then((response)=>{
+        if (response.error != ""){
+            console.log(response.data)
 
-    post1= '<div class="blogPost"><a href="post1.html"><h3 class="resize">Post 1</h3></a><p class="resize">    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore    et dolore magna aliqua.    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo    consequat. Duis aute irure    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur    sint occaecat cupidatat non    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
-    post2= '<div class="blogPost"><a href="post2.html"><h3 class="resize">Post 2</h3></a><p class="resize">    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore    et dolore magna aliqua.    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo    consequat. Duis aute irure    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur    sint occaecat cupidatat non    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
-    post3= '<div class="blogPost"><a href="post3.html"><h3 class="resize">Post 3</h3></a><p class="resize">    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore    et dolore magna aliqua.    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo    consequat. Duis aute irure    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur    sint occaecat cupidatat non    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
-    post4= '<div class="blogPost"><a href="post4.html"><h3 class="resize">Post 4</h3></a><p class="resize">    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore    et dolore magna aliqua.    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo    consequat. Duis aute irure    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur    sint occaecat cupidatat non    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
-
-if (n == 0) {
-    document.getElementById("containerBlogPost").innerHTML = posts[0].title;    
+            if (n == 0) {
+                document.getElementById("containerBlogPost").innerHTML = '<div class="blogPost"><a href="post4.html"><h3 class="resize">'+posts[3].title+'</h3></a><p class="resize"></p>';    
+            }
+            else if (n == 1){
+                document.getElementById("containerBlogPost").innerHTML = posts[1].title;    
+            
+            }
+            else if (n == 2){
+                document.getElementById("containerBlogPost").innerHTML = posts[2].title;    
+            
+            }
+            else if (n == 3){
+                document.getElementById("containerBlogPost").innerHTML = posts[3].title;    
+            
+            }
+        } else {
+            document.getElementById('status').innerHTML = error; 
+            showStatus(0)
+        }
+    })
+    .catch((connectionError)=>{
+        console.log(connectionError)
+        document.getElementById('status').innerHTML = connectionError
+        showStatus(0)
+    })
 }
-else if (n == 1){
-    document.getElementById("containerBlogPost").innerHTML = posts[1].title;    
-
-}
-else if (n == 2){
-    document.getElementById("containerBlogPost").innerHTML = posts[2].title;    
-
-}
-else if (n == 3){
-    document.getElementById("containerBlogPost").innerHTML = posts[3].title;    
-
-}
-}
-
-window.onload = changeImg();

@@ -16,23 +16,8 @@ var Users = mongoose.model('Users', userSchema);
 
 module.exports = function (app) {
 
-    /*     app.post('/add_user', async (req, res) => {
-            const user = new Users({
-                username: req.body.username,
-                password: req.body.password
-            });
-            try {
-                const savedPost = await post.save();
-                res.json(savedPost);
-    
-            }
-            catch (err) {
-                res.json({message:err});
-            }
-        }) */
-
     //GETS LIST OF USERS
-    app.get('/list_user', async (req, res) => {
+    app.get('/user', async (req, res) => {
         try {
             const users = await Users.find();
             res.json(users);
@@ -44,7 +29,7 @@ module.exports = function (app) {
     })
 
     //SUBMITS A USER
-    app.post('/add_user', async (req, res) => {
+    app.post('/user', async (req, res) => {
         const user = new Users({
             username: req.body.username,
             password: req.body.password
@@ -60,7 +45,7 @@ module.exports = function (app) {
     });
 
     //GETS SPECIFIC USER
-    app.get('/list_user/:userId', async (req, res) => {
+    app.get('/user/:userId', async (req, res) => {
         try {
             const user = await Users.findById(req.params.userId);
             res.json(user);
@@ -71,7 +56,7 @@ module.exports = function (app) {
     });
 
     //REMOVES SPECIFIC USER
-    app.delete('/delete_user/:userId', async (req, res) => {
+    app.delete('/user/:userId', async (req, res) => {
         try {
             const removedUser = await Users.remove({ _id: req.params.userId });
             res.json(removedUser);
@@ -82,7 +67,7 @@ module.exports = function (app) {
     });
 
     //EDITS A SPECIFIC USER
-    app.patch('/edit_user/:userId', async (req, res) => {
+    app.patch('/user/:userId', async (req, res) => {
         try {
             const updatedUser = await Users.updateOne(
                 { _id: req.params.userId },

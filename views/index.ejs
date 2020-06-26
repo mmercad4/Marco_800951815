@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
-    
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src='/assets/main.js'></script>
 <%- include('partials/header'); -%>
 
-    <!------------------------------------------------------ Background  ------------------------------------------------------------------>
+<!------------------------------------------------------ Background  ------------------------------------------------------------------>
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 
-    <div class="indexBackground">
-        <img name="slide" class="indexBackground" src="/assets/Images/image2.jpg">
-    </div>
+<div class="indexBackground">
+    <img name="slide" class="indexBackground" src="/assets/Images/image2.jpg">
+</div>
 
-    <!------------------------------------------------------ Blog Entry Section  ------------------------------------------------------------------>
+<!------------------------------------------------------ Blog Entry Section  ------------------------------------------------------------------>
 
 
-   <div style="text-align:center">
-        <span class="dot" onclick="currentPost(0)"></span>
-        <span class="dot" onclick="currentPost(1)"></span>
-        <span class="dot" onclick="currentPost(2)"></span>
-        <span class="dot" onclick="currentPost(3)"></span>
-    </div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentPost(0)"></span>
+    <span class="dot" onclick="currentPost(1)"></span>
+    <span class="dot" onclick="currentPost(2)"></span>
+    <span class="dot" onclick="currentPost(3)"></span>
+</div>
 
-    <div class="row">
-        <div class="column">
-            <div id="containerBlogPost">
-                <div class="blogPost"><a href="post">
-                    <h3 class="resize"><%= posts[0].title %></h3>
+<div class="row">
+    <div class="column">
+        <div id="containerBlogPost">
+            <div class="blogPost"><a href="post">
+                    <h3 class="resize"><%= posts[1].title %></h3>
                 </a>
                 <p class="resize">
-                    "<%= posts[0].content %>"
+                    "<%= posts[1].content %>"
                 </p>
-            </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!------------------------------------------------------ Footer  ------------------------------------------------------------------>
+<!------------------------------------------------------ Footer  ------------------------------------------------------------------>
 
 
-    <%- include('partials/footer'); -%>
+<%- include('partials/footer'); -%>
 
 
 </body>
